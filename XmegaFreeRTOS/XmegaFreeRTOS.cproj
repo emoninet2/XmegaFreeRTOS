@@ -20,10 +20,10 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <RamSnippetAddress />
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <OverrideVtorValue />
     <BootSegment>2</BootSegment>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <AsfFrameworkConfig>
@@ -38,45 +38,6 @@
   </dependencies>
 </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
-    <avrtoolserialnumber>J41800024495</avrtoolserialnumber>
-    <avrdeviceexpectedsignature>0x1E9845</avrdeviceexpectedsignature>
-    <com_atmel_avrdbg_tool_simulator>
-      <ToolOptions>
-        <InterfaceProperties>
-        </InterfaceProperties>
-        <InterfaceName>
-        </InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
-      <ToolNumber>
-      </ToolNumber>
-      <ToolName>Simulator</ToolName>
-    </com_atmel_avrdbg_tool_simulator>
-    <avrtoolinterface>PDI</avrtoolinterface>
-    <com_atmel_avrdbg_tool_edbgc>
-      <ToolOptions>
-        <InterfaceProperties>
-          <PdiClock>4000000</PdiClock>
-        </InterfaceProperties>
-        <InterfaceName>PDI</InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.edbgc</ToolType>
-      <ToolNumber>02400226c3474e1a0000000000000000000000003e9eb3a2</ToolNumber>
-      <ToolName>EDBG</ToolName>
-    </com_atmel_avrdbg_tool_edbgc>
-    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
-    <com_atmel_avrdbg_tool_atmelice>
-      <ToolOptions>
-        <InterfaceProperties>
-          <PdiClock>4000000</PdiClock>
-        </InterfaceProperties>
-        <InterfaceName>PDI</InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
-      <ToolNumber>J41800024495</ToolNumber>
-      <ToolName>Atmel-ICE</ToolName>
-    </com_atmel_avrdbg_tool_atmelice>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -134,11 +95,11 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>..</Value>
-      <Value>../Source</Value>
-      <Value>../Source/include</Value>
-      <Value>../Source/include/portable/GCC/ATMega323</Value>
       <Value>%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\include</Value>
+      <Value>../FreeRTOSv9.0.0</Value>
+      <Value>../FreeRTOSv9.0.0/FreeRTOS/Source</Value>
+      <Value>../FreeRTOSv9.0.0/FreeRTOS/Source/include</Value>
+      <Value>../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -161,104 +122,140 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="FreeRTOSConfig.h">
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\event_groups.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\croutine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\deprecated_definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\event_groups.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\FreeRTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\mpu_prototypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\portable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\projdefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\semphr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\StackMacros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\timers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\avr_compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\pmic_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\pmic_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\TC_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\TC_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\MemMang\heap_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FreeRTOSv9.0.0\FreeRTOS\Source\timers.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Source\croutine.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\event_groups.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\croutine.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\event_groups.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\FreeRTOS.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\list.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\mpu_wrappers.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\avr_compiler.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\pmic_driver.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\pmic_driver.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\port.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\portmacro.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\TC_driver.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\GCC\ATMega323\TC_driver.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\portable\MemMang\heap_1.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\projdefs.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\queue.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\semphr.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\StackMacros.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\task.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\include\timers.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\list.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\queue.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\tasks.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Source\timers.c">
-      <SubType>compile</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Source\" />
-    <Folder Include="Source\include\" />
-    <Folder Include="Source\include\portable\" />
-    <Folder Include="Source\include\portable\GCC\" />
-    <Folder Include="Source\include\portable\GCC\ATMega323\" />
-    <Folder Include="Source\include\portable\MemMang\" />
+    <Folder Include="FreeRTOSv9.0.0\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\License\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\Source\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\GCC\ATMega323\" />
+    <Folder Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\MemMang\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Source\include\stdint.readme">
+    <None Include="FreeRTOSv9.0.0\FreeRTOS\License\license.txt">
       <SubType>compile</SubType>
     </None>
-    <None Include="Source\readme.txt">
+    <None Include="FreeRTOSv9.0.0\FreeRTOS\links_to_doc_pages_for_the_demo_projects.url">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\FreeRTOS\readme.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\FreeRTOS\Source\include\stdint.readme">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\FreeRTOS\Source\portable\MemMang\ReadMe.url">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\FreeRTOS\Source\readme.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\New - Direct to Task Notifications.url">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\New - FreeRTOS+TCP.url">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\Quick_Start_Guide.url">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\readme.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="FreeRTOSv9.0.0\Upgrading-to-FreeRTOS-9.url">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>

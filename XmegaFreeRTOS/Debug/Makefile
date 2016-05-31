@@ -33,27 +33,30 @@ LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
-../Source/ \
-../Source/include/ \
-../Source/include/portable/ \
-../Source/include/portable/GCC/ \
-../Source/include/portable/GCC/ATMega323/ \
-../Source/include/portable/MemMang/
+../FreeRTOSv9.0.0/ \
+../FreeRTOSv9.0.0/FreeRTOS/ \
+../FreeRTOSv9.0.0/FreeRTOS/License/ \
+../FreeRTOSv9.0.0/FreeRTOS/Source/ \
+../FreeRTOSv9.0.0/FreeRTOS/Source/include/ \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/ \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/ \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../main.c \
-../Source/croutine.c \
-../Source/event_groups.c \
-../Source/include/portable/GCC/ATMega323/pmic_driver.c \
-../Source/include/portable/GCC/ATMega323/port.c \
-../Source/include/portable/GCC/ATMega323/TC_driver.c \
-../Source/include/portable/MemMang/heap_1.c \
-../Source/list.c \
-../Source/queue.c \
-../Source/tasks.c \
-../Source/timers.c
+../FreeRTOSv9.0.0/FreeRTOS/Source/croutine.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/event_groups.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/list.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/pmic_driver.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/port.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/TC_driver.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/heap_1.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/queue.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/tasks.c \
+../FreeRTOSv9.0.0/FreeRTOS/Source/timers.c \
+../main.c
 
 
 PREPROCESSING_SRCS += 
@@ -63,56 +66,56 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-main.o \
-Source/croutine.o \
-Source/event_groups.o \
-Source/include/portable/GCC/ATMega323/pmic_driver.o \
-Source/include/portable/GCC/ATMega323/port.o \
-Source/include/portable/GCC/ATMega323/TC_driver.o \
-Source/include/portable/MemMang/heap_1.o \
-Source/list.o \
-Source/queue.o \
-Source/tasks.o \
-Source/timers.o
+FreeRTOSv9.0.0/FreeRTOS/Source/croutine.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/event_groups.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/list.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/pmic_driver.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/port.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/TC_driver.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/heap_1.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/queue.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/tasks.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/timers.o \
+main.o
 
 OBJS_AS_ARGS +=  \
-main.o \
-Source/croutine.o \
-Source/event_groups.o \
-Source/include/portable/GCC/ATMega323/pmic_driver.o \
-Source/include/portable/GCC/ATMega323/port.o \
-Source/include/portable/GCC/ATMega323/TC_driver.o \
-Source/include/portable/MemMang/heap_1.o \
-Source/list.o \
-Source/queue.o \
-Source/tasks.o \
-Source/timers.o
+FreeRTOSv9.0.0/FreeRTOS/Source/croutine.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/event_groups.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/list.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/pmic_driver.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/port.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/TC_driver.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/heap_1.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/queue.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/tasks.o \
+FreeRTOSv9.0.0/FreeRTOS/Source/timers.o \
+main.o
 
 C_DEPS +=  \
-main.d \
-Source/croutine.d \
-Source/event_groups.d \
-Source/include/portable/GCC/ATMega323/pmic_driver.d \
-Source/include/portable/GCC/ATMega323/port.d \
-Source/include/portable/GCC/ATMega323/TC_driver.d \
-Source/include/portable/MemMang/heap_1.d \
-Source/list.d \
-Source/queue.d \
-Source/tasks.d \
-Source/timers.d
+FreeRTOSv9.0.0/FreeRTOS/Source/croutine.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/event_groups.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/list.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/pmic_driver.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/port.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/TC_driver.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/heap_1.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/queue.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/tasks.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/timers.d \
+main.d
 
 C_DEPS_AS_ARGS +=  \
-main.d \
-Source/croutine.d \
-Source/event_groups.d \
-Source/include/portable/GCC/ATMega323/pmic_driver.d \
-Source/include/portable/GCC/ATMega323/port.d \
-Source/include/portable/GCC/ATMega323/TC_driver.d \
-Source/include/portable/MemMang/heap_1.d \
-Source/list.d \
-Source/queue.d \
-Source/tasks.d \
-Source/timers.d
+FreeRTOSv9.0.0/FreeRTOS/Source/croutine.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/event_groups.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/list.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/pmic_driver.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/port.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/TC_driver.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/heap_1.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/queue.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/tasks.d \
+FreeRTOSv9.0.0/FreeRTOS/Source/timers.d \
+main.d
 
 OUTPUT_FILE_PATH +=XmegaFreeRTOS.elf
 
@@ -151,31 +154,31 @@ LINKER_SCRIPT_DEP+=
 
 
 
+FreeRTOSv9.0.0/FreeRTOS/Source/%.o: ../FreeRTOSv9.0.0/FreeRTOS/Source/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 4.9.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include" -I"../FreeRTOSv9.0.0" -I"../FreeRTOSv9.0.0/FreeRTOS/Source" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/include" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/%.o: ../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 4.9.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include" -I"../FreeRTOSv9.0.0" -I"../FreeRTOSv9.0.0/FreeRTOS/Source" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/include" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/%.o: ../FreeRTOSv9.0.0/FreeRTOS/Source/portable/MemMang/%.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 4.9.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include" -I"../FreeRTOSv9.0.0" -I"../FreeRTOSv9.0.0/FreeRTOS/Source" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/include" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./%.o: .././%.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 4.9.2
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I".." -I"../Source" -I"../Source/include" -I"../Source/include/portable/GCC/ATMega323" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-Source/%.o: ../Source/%.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 4.9.2
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I".." -I"../Source" -I"../Source/include" -I"../Source/include/portable/GCC/ATMega323" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-Source/include/portable/GCC/ATMega323/%.o: ../Source/include/portable/GCC/ATMega323/%.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 4.9.2
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I".." -I"../Source" -I"../Source/include" -I"../Source/include/portable/GCC/ATMega323" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-Source/include/portable/MemMang/%.o: ../Source/include/portable/MemMang/%.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 4.9.2
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I".." -I"../Source" -I"../Source/include" -I"../Source/include/portable/GCC/ATMega323" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\include" -I"../FreeRTOSv9.0.0" -I"../FreeRTOSv9.0.0/FreeRTOS/Source" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/include" -I"../FreeRTOSv9.0.0/FreeRTOS/Source/portable/GCC/ATMega323"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atxmega384c3 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
